@@ -96,13 +96,18 @@ public class StringArrayUtils {
      */ // TODO
     public static boolean isPangramic(String[] array) {
 
-        //not passing
+        String blank = "";
+        blank = blank.join("", array).replaceAll("\\s+","").toLowerCase();
 
         boolean outcome = false;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == "a") {
-                outcome = true;
+        int ind = 0;
+        for (char Al = 'a'; Al < 'z'; Al++) {
+            ind = blank.indexOf(Al);
+            if (ind == -1){
+                outcome = false;
                 break;
+            }else{
+                outcome = true;
             }
         }
         return outcome;
@@ -187,12 +192,23 @@ public class StringArrayUtils {
     public static String[] packConsecutiveDuplicates(String[] array) {
 
         String emp = "";
+//        List st3 = Arrays.asList(array);
+//        st3.add("TEST");
+       // Sting[] arr2
+
         ArrayList<String> st2 = new ArrayList<>();
-        for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] != array[i + 1]) {
-                st2.add(array[i]);
+        for (int i = 0; i < array.length-1; i++) {
+            if (array[i] == array[i + 1]) {
+                emp += array[i];
+            }else {
+                emp += array[i];
+                st2.add(emp);
+                emp = "";
             }
+
         }
+        emp += array[array.length-1];
+        st2.add(emp);
         String[] results = new String[st2.size()];
         st2.toArray(results);
         System.out.println(Arrays.toString(results));
