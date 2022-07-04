@@ -178,9 +178,6 @@ public class StringArrayUtils {
     public static String[] packConsecutiveDuplicates(String[] array) {
 
         String emp = "";
-//        List st3 = Arrays.asList(array);
-//        st3.add("TEST");
-       // Sting[] arr2
 
         ArrayList<String> st2 = new ArrayList<>();
         for (int i = 0; i < array.length-1; i++) {
