@@ -170,20 +170,6 @@ public class StringArrayUtils {
     }
 
 
-//        ArrayList<String> st = new ArrayList<>();
-//
-//        String[] results = new String[0];
-//        for (int i = 0; i < array.length - 1; i++) {
-//            for (int j = 1; j < array.length; j++) {
-//                if (array[i] != array[j]) {
-//                    st.add(array[i]);
-//                }
-//
-//            }
-//
-//        }
-//        return st.toArray(results);
-//    }
 
     /**
      * @param array array of chars
@@ -214,25 +200,6 @@ public class StringArrayUtils {
         System.out.println(Arrays.toString(results));
         return (st2.toArray(results));
     }
-
-
-//            for (int j = 1; j < array.length; j++) {
-//                while (array[i] == array[j]) {
-//                    emp = emp + array[i];
-//                    i++;
-//                    j++;
-//                    if (array[j] != array[j+1] && j+1 == array.length){
-//                        emp = emp + array[j];
-//                    }
-//                    if (j + 1 == array.length){
-//                        break;
-//                    }
-//                }st.add(emp);
-//                emp = "";
-//            }
-//        } String[] results = new String [st.size()];
-//        st.toArray(results);
-//        System.out.println(Arrays.toString(results));}
 
 
 }
